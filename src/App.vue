@@ -16,12 +16,30 @@ import MyHeader from './components/my-header.vue';
   components: {
     MainContainer,
     MyFooter,
-    MyHeader
+    MyHeader,
   },
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: 'Girls Have Many Secrets';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Girls\ Have\ Many\ Secrets.ttf') format('truetype');
+}
 
+body {
+  background-color: rgb(223, 225, 236);
+  font-family: 'Girls Have Many Secrets', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100%;
+  position: relative;
+}
 </style>
