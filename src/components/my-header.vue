@@ -4,13 +4,13 @@
       <span class="title">Lauren's VR Portfolio</span>
     </div>
     <div class="head-nav-bar">
-      <a class="nav-link" href="javascript:;">
+      <a class="nav-link" href="javascript:;" v-on:click="navigatePage('home')">
         Home
       </a>
-      <a class="nav-link" href="javascript:;">
+      <a class="nav-link" href="javascript:;" v-on:click="navigatePage('about')">
         About
       </a>
-      <a class="nav-link" href="javascript:;">
+      <a class="nav-link" href="javascript:;" v-on:click="navigatePage('projects')">
         Projects
       </a>
     </div>
@@ -18,11 +18,14 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue, Component, Emit } from 'vue-property-decorator';
 
 @Component
 export default class MyHeader extends Vue {
 
+  public navigatePage(val: string) {
+    this.$emit('pageChange', val);
+  }
 }
 </script>
 

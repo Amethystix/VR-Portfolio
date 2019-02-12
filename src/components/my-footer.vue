@@ -18,6 +18,7 @@ export default class MyFooter extends Vue {
 #footer {
   background-color: rgb(98, 179, 255);
   bottom: 0;
+  box-sizing: border-box;
   padding: 30px;
   text-align: center;
   width: 100%;

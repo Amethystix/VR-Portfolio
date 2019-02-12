@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MyHeader/>
-    <MainContainer/>
+    <MyHeader v-on:pageChange="changePageName"/>
+    <MainContainer v-bind:pageName="page"/>
     <MyFooter/>
   </div>
 </template>
@@ -19,7 +19,13 @@ import MyHeader from './components/my-header.vue';
     MyHeader,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  public page = 'home';
+
+  public changePageName(val: string) {
+    this.page = val;
+  }
+}
 </script>
 
 <style lang="scss">
@@ -39,7 +45,7 @@ body {
 }
 
 #app {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
 }
 </style>
