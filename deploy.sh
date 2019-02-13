@@ -1,6 +1,6 @@
 set -e
 
-npm rn build
+npm run build
 
 cd dist
 
